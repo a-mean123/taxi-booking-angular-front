@@ -1,0 +1,53 @@
+
+
+
+<div class="container">
+
+
+    <h1 class="lead m-3">Gestion des contacts et des reclammations</h1>
+
+
+
+    <table class="table" >
+
+
+        <thead>
+            <tr>
+
+                <th>Name</th>
+                <th>Email</th>
+                <th>Subject</th>
+                <th>Message</th>
+                <th>Action</th>
+
+            </tr>
+
+
+        </thead>
+
+
+        <tbody>
+
+              <tr *ngFor="let c of contacts">
+
+                <td>{{c.name}}</td>
+                <td>{{c.email}}</td>
+                <td>{{c.subject}}</td>
+                <td>{{c.message}}</td>
+                <td>
+
+                    <button (click)="delete(c._id)" class="btn btn-danger">delete</button>
+                </td>
+
+
+
+              </tr>  
+
+
+
+        </tbody>
+
+    </table>
+
+
+</div>

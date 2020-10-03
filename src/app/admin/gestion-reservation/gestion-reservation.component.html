@@ -1,0 +1,72 @@
+
+
+
+<div class="container-fluid p-4">
+
+    <h1 class="lead m-3">Gestion des reservations</h1>
+
+
+
+    <table class="table">
+
+
+        <thead>
+
+            <tr>
+
+
+                <th>name</th>
+                <th>email</th>
+                <th>telephone</th>
+                <th>date</th>
+                <th>time</th>
+                <th>c.postal</th>
+                <th>depart</th>
+                <th>destination</th>
+                <th>nombres</th>
+                <th>etat</th>
+
+                <th>action</th>
+
+
+
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+            <tr *ngFor="let r of reservations">
+                <td>{{r.name}}</td>
+                <td>{{r.email}}</td>
+                <td>{{r.phone}}</td>
+                <td>{{r.date}}</td>
+                <td>{{r.time}}</td>
+                <td>{{r.postal}}</td>
+                <td>{{r.depart}}</td>
+                <td>{{r.destination}}</td>
+                <td>{{r.nombre}}</td>
+                <td> <span *ngIf="r.etat == '0'" class="bg-primary">en attente</span> <span class="bg-success"  *ngIf="r.etat == '1'">accepté</span>  <span class="bg-danger"  *ngIf="r.etat == '-1'">refusé</span></td>
+
+                <td>
+
+
+                    <button (click)="delete(r._id)" class="btn btn-danger">delete</button>
+                    <button (click)="acceptReservation(r._id)" class="btn btn-primary">Accepter</button>
+                    <button (click)="refuserReservation(r._id)" class="btn btn-success">Refuser</button>
+            
+                </td>
+
+            </tr>
+
+
+        </tbody>
+
+
+    </table>
+
+
+
+
+</div>

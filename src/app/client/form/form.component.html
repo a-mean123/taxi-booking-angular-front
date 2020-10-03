@@ -1,0 +1,110 @@
+
+    <!-- ====== Check Vehicle Area ====== --> 
+    <div class="check-vehicle-block gray-20">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="check-content">
+                        <h4 class="top-subtitle">Search your Taxi</h4>
+                        <h2 class="title yellow-color">For rates &amp; Availability</h2>
+                        <h3 class="subtitle">Find Best Rental Car</h3>
+                    </div><!-- /.check-content -->
+                </div><!-- col-md-4 -->
+
+                <div class="col-md-8">
+                    <div class="advance-search-query input-night-rider yellow-theme">
+                        <div class="regular-search"> 
+                            
+                            <h4 *ngIf="alert" class="title yellow-color">Votre reservation est bien envoyée</h4>
+                            <div class="row">
+                              
+                                <div class="col-md-4">
+                                    <label>Nom et Prenom</label>
+                                    <div class="input">
+                                        <i class="fa fa-user"></i>
+                                        <input type="text" [(ngModel)]="reservation.name"  placeholder="Nom et prenom" class="pick-location form-controller">
+                                    </div><!--/.input-->
+                                </div><!--/.col-md-4-->
+                                <div class="col-md-4">
+                                    <label>Email</label>
+                                    <div class="input">
+                                        <i class="fa fa-envelope"></i>
+                                        <input type="text" [(ngModel)]="reservation.email" placeholder="email" class="pick-location form-controller">
+                                    </div><!--/.input-->
+                                </div><!--/.col-md-4-->
+                                <div class="col-md-4">
+                                    <label>Numero de telephone</label>
+                                    <div class="input">
+                                        <i class="fa fa-phone"></i>
+                                        <input type="text" placeholder="telephone" [(ngModel)]="reservation.phone" class="pick-location form-controller">
+                                    </div><!--/.input-->
+                                </div><!--/.col-md-4-->
+                              
+                           
+
+                                <div class="col-md-4">
+                                    <label>Picking up date</label>
+                                    <div class="input">
+                                        <i class="fa fa-calendar"></i>
+                                        <input type="date" [(ngModel)]="reservation.date" class="form-controller" placeholder="dd/mm/yy">
+                                    </div><!--/.input-->
+                                </div><!--/.col-md-4-->
+
+                                <div class="col-md-4">
+                                    <label>Picking up Time</label>
+                                    <div class="input">
+                                        <i class="fa fa-clock-o"></i>
+                                        <input type="time" [(ngModel)]="reservation.time" class=" form-controller" placeholder="15:00 am">
+                                      </div><!--/.input-->
+                                </div><!--/.col-md-4-->
+                                <div class="col-md-4">
+                                    <label>Code postal</label>
+                                    <div class="input">
+                                        <i class="fa fa-envelope"></i>
+                                        <input type="text" placeholder="code postal" [(ngModel)]="reservation.postal" class="pick-location form-controller">
+                                    </div><!--/.input-->
+                                </div><!--/.col-md-4-->
+                                <div class="clearfix"></div><!-- /.clearfix -->
+
+                                <div class="col-md-4">
+                                    <label>Dropping off location</label>
+                                    <div class="input">
+                                        <i class="fa fa-map-marker"></i>
+                                        <input type="text" placeholder="depart" [(ngModel)]="reservation.depart" class="drop-location form-controller">
+                                    </div><!--/.input-->
+                                </div><!--/.col-md-4-->
+                                <div class="col-md-4">
+                                    <label>Dropping off location</label>
+                                    <div class="input">
+                                        <i class="fa fa-map-marker"></i>
+                                        <input type="text" placeholder="destination" [(ngModel)]="reservation.destination" class="drop-location form-controller">
+                                    </div><!--/.input-->
+                                </div><!--/.col-md-4-->
+                                <div class="col-md-4">
+                                    <label>Nombre de personnes</label>
+                                    <div class="input">
+                                       
+                                        <input type="number" [(ngModel)]="reservation.nombre" class="form-controller" placeholder="nombre de personnes">
+                                    </div><!--/.input-->
+                                </div><!--/.col-md-4-->
+
+                            
+                            </div><!-- /.row -->
+                        </div><!-- /.regular-search -->
+
+                    
+
+                        <div class="check-vehicle-footer">
+                            <div class="row">                            
+                                <div class="advanced-search">
+                                </div>
+                                <button (click)="reserver()" type="submit" class="button">Reserver</button>
+                            </div><!-- /.row -->
+                        </div><!-- /.check-vehicle-footer -->
+                    </div><!-- /.advance_search_query -->
+                </div><!-- /.col-md-8 -->
+            </div><!-- /.row -->
+        </div><!--/.container -->
+    </div><!-- /.check-vehicle-block-->
+
+    <div class="vehicle-multi-border yellow-black"></div><!-- /.vehicle-multi-border -->
